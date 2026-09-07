@@ -400,6 +400,37 @@ body{background:var(--v5-ivory);}
 }
 </style>
 
+
+<style id="v61-responsive-safe-zones">
+:root { --flower-ziarah: clamp(135px, 32vw, 195px); }
+.ziarah-hero {
+  --ziarah-top-safe: clamp(108px, 26vw, 160px);
+  --ziarah-bottom-safe: clamp(124px, 29vw, 180px);
+  padding: var(--ziarah-top-safe) 22px var(--ziarah-bottom-safe) !important;
+  overflow: hidden;
+}
+.ziarah-hero .jasmine-corner { width: var(--flower-ziarah) !important; }
+.ziarah-hero .jasmine-tl { top: 0 !important; left: 0 !important; }
+.ziarah-hero .jasmine-br { right: 0 !important; bottom: 0 !important; }
+.ziarah-hero-inner { width: min(100%, 720px); position: relative; z-index: 2; }
+.ziarah-hero .back-link { margin-bottom: 22px; }
+.ziarah-hero .lead {
+  /* reserve a right-side column matching the floral footprint */
+  width: calc(100% - clamp(82px, 18vw, 150px));
+  max-width: 600px;
+  margin-right: auto;
+}
+@media (max-width: 430px) {
+  :root { --flower-ziarah: clamp(132px, 38vw, 155px); }
+  .ziarah-hero { padding-left: 20px !important; padding-right: 20px !important; }
+  .ziarah-hero .lead { width: calc(100% - 92px); }
+}
+@media (min-width: 700px) {
+  .ziarah-hero { padding-top: clamp(84px, 18vw, 112px) !important; }
+  .ziarah-hero .lead { width: min(600px, calc(100% - 145px)); }
+}
+</style>
+
 </head>
 <body class="ziarah-page">
   <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>

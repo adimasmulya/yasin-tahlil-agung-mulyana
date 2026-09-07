@@ -1,3 +1,7 @@
+# V6.1 Responsive Safe-Zone Patch
+
+Corrects the memorial date and commemoration schedule, reserves responsive space for floral PNG assets, and refreshes the service-worker cache strategy.
+
 # V6 Floral PNG Refresh
 
 This version replaces the inline floral ornament with transparent PNG corner assets and updates the landing, obituary, and ziarah header to use those decorative files.
