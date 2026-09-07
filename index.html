@@ -163,7 +163,7 @@ body.hide-translation .translation, body.hide-translation .footnote { display: n
 .source-card a { font-size: .82rem; font-weight: 700; }
 .licence-note { color: var(--muted); font-size: .76rem; padding: 4px 3px; }
 
-.bottom-nav { position: fixed; z-index: 50; left: 50%; bottom: max(10px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(calc(100% - 22px), 520px); display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 5px; border: 1px solid var(--line); border-radius: 18px; background: color-mix(in srgb, var(--surface-solid) 90%, transparent); backdrop-filter: blur(20px); box-shadow: 0 12px 36px rgba(30,40,33,.12); }
+.bottom-nav { position: fixed; z-index: 50; left: 50%; bottom: max(10px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(calc(100% - 22px), 520px); display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; padding: 5px; border: 1px solid var(--line); border-radius: 18px; background: color-mix(in srgb, var(--surface-solid) 90%, transparent); backdrop-filter: blur(20px); box-shadow: 0 12px 36px rgba(30,40,33,.12); }
 .bottom-nav a { min-height: 42px; display: grid; place-items: center; border-radius: 13px; color: var(--muted); text-decoration: none; font-weight: 750; font-size: .70rem; }
 .bottom-nav a.is-active { background: var(--accent-soft); color: var(--accent-strong); }
 .noscript { padding: 18px; margin: 18px; background: #fff3cd; color: #443500; border-radius: 12px; }
@@ -517,7 +517,7 @@ body.memorial-active .controls {
         <p>Mohon berkenan menghadiahkan Al-Fatihah serta doa terbaik untuk almarhum. Semoga Allah SWT menerima amal ibadahnya, mengampuni segala khilafnya, melapangkan kuburnya, dan menempatkannya dalam rahmat-Nya.</p>
       </div>
       <div class="cover-actions">
-        <a class="primary-button" href="#yasin" id="startReading">Mulai Membaca <span aria-hidden="true">›</span></a>
+        <a class="primary-button" href="#tawassul" id="startReading">Mulai Membaca <span aria-hidden="true">›</span></a>
         <a class="cover-secondary" href="ziarah.html">Panduan Ziarah Kubur →</a>
       </div>
       <div class="cover-slogan">Setiap doa<br>adalah cahaya<br>yang terus mengalir</div>
@@ -764,6 +764,7 @@ body.memorial-active .controls {
      <a href="#yasin" data-target="yasin">Yasin</a>
      <a href="#tahlil" data-target="tahlil">Tahlil</a>
      <a href="#doa" data-target="doa">Doa</a>
+     <a href="#in-memoriam" data-target="in-memoriam">Memorial</a>
   </nav>
 
   <noscript>
@@ -2072,5 +2073,97 @@ window.TAHLIL_DATA = {
   document.addEventListener('click',(e)=>{if(!m.contains(e.target)&&e.target!==b) close();});
 })();
 </script>
+
+<style id="darkFix">
+/* Night mode: the theme variables existed but a later layer hardcoded light
+   colours over them. These overrides restore a real dark reading surface. */
+html[data-theme="dark"]{
+  --v5-ivory:#141915; --v5-paper:#191f1a; --v5-green:#B9CDBB; --v5-green2:#9ec0a6;
+  --v5-gold:#C3A96A; --v5-gold-soft:#5b5033; --v5-ink:#EDF0EA; --v5-muted:#A3AE9D;
+}
+html[data-theme="dark"] body{background:var(--bg);color:var(--text);}
+html[data-theme="dark"] .cover,
+html[data-theme="dark"] .ziarah-hero{background:linear-gradient(180deg,#181E19 0%,#11150F 100%);}
+html[data-theme="dark"] .cover-menu{background:rgba(24,30,25,.97);border:1px solid #2d362f;}
+html[data-theme="dark"] .cover-menu a{color:#D6DED1;}
+html[data-theme="dark"] .cover-menu a:hover{background:#233028;}
+html[data-theme="dark"] .cover-reading-index{color:#7f8a7c;}
+html[data-theme="dark"] .cover .cover-subtitle{color:#9FAE9D;}
+html[data-theme="dark"] .cover h1,
+html[data-theme="dark"] .cover h1 span,
+html[data-theme="dark"] .obituary h2{color:#E6EFE1;}
+html[data-theme="dark"] .dates,
+html[data-theme="dark"] .obituary .obit-dates{color:#C3CCC0;}
+html[data-theme="dark"] .weton{color:var(--v5-gold);}
+html[data-theme="dark"] .cover-prayer,
+html[data-theme="dark"] .obituary .obit-copy,
+html[data-theme="dark"] .obit-quote{color:#C9D2C6;}
+html[data-theme="dark"] .cover-secondary,
+html[data-theme="dark"] .cover-slogan,
+html[data-theme="dark"] .obit-quote cite{color:#8B9487;}
+html[data-theme="dark"] .portrait-wrap,
+html[data-theme="dark"] .obituary .obit-portrait{background:#1B211C;border-color:#4a5544;}
+html[data-theme="dark"] .event-pill,
+html[data-theme="dark"] .primary-button{background:linear-gradient(180deg,#2F5A42,#22412F);
+  border:1px solid #3C6B50;color:#EAF3EA;}
+html[data-theme="dark"] .reading-card,
+html[data-theme="dark"] .source-card{background:#1A201B;border-color:#2D362F;}
+html[data-theme="dark"] .arabic{color:#EFF4EB;}
+html[data-theme="dark"] .transliteration{color:#DCE4D6;}
+html[data-theme="dark"] .translation,
+html[data-theme="dark"] .section-note,
+html[data-theme="dark"] .footnote,
+html[data-theme="dark"] .licence-note{color:#A3AE9D;}
+html[data-theme="dark"] .section-note{border-left-color:#2D362F;}
+html[data-theme="dark"] .unit-title,
+html[data-theme="dark"] .obituary .obit-kicker,
+html[data-theme="dark"] .section-heading,
+html[data-theme="dark"] .source-card h3{color:#B9CDBB;}
+html[data-theme="dark"] .obituary{background:linear-gradient(180deg,#1A201B,#141915);
+  border:1px solid #2D362F;}
+html[data-theme="dark"] .obituary .career strong{color:#E6EFE1;}
+html[data-theme="dark"] .obituary .career p{color:#DCE4D6;}
+html[data-theme="dark"] .obituary .career span{color:#A3AE9D;}
+html[data-theme="dark"] .family-card{background:rgba(30,37,31,.7);border:1px solid #2D362F;}
+html[data-theme="dark"] .family-card h3{color:#E6EFE1;}
+html[data-theme="dark"] .family-card p,
+html[data-theme="dark"] .family-card ol{color:#C3CCC0;}
+html[data-theme="dark"] .obit-closing-prayer .arabic-line{color:#CFE0D2;}
+html[data-theme="dark"] .obit-closing-prayer .meaning{color:#A3AE9D;}
+html[data-theme="dark"] .bottom-nav,
+html[data-theme="dark"] .reader-topbar{background:rgba(24,30,25,.96);border-color:#2D362F;}
+html[data-theme="dark"] .bottom-nav a{color:#9FAE9D;}
+html[data-theme="dark"] .bottom-nav a.is-active{background:#233028;color:#CFE0D2;}
+html[data-theme="dark"] .reader-topbar button,
+html[data-theme="dark"] .control-chip,
+html[data-theme="dark"] .reader-controls button{background:#1F2620;border-color:#2D362F;color:#C3CCC0;}
+html[data-theme="dark"] .reader-controls button.is-active,
+html[data-theme="dark"] .control-chip.is-active{background:#26382C;color:#CFE0D2;border-color:#3C6B50;}
+html[data-theme="dark"] .repeat-badge{background:#26382C;color:#CFE0D2;}
+html[data-theme="dark"] .ornament-line,
+html[data-theme="dark"] .obit-ornament{color:var(--v5-gold);}
+html[data-theme="dark"] img.jasmine-corner{opacity:.72;}
+/* white overlays that sat on top of the dark base */
+html[data-theme="dark"] body{background:var(--bg);background-image:none;}
+html[data-theme="dark"] .dedication-card{
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,0)),#233028;
+  color:#CFE0D2;border-color:#3C6B50;}
+html[data-theme="dark"] .obituary{
+  background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015)),#1A201B;}
+html[data-theme="dark"] .obituary .obit-portrait,
+html[data-theme="dark"] .portrait-wrap{
+  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02)),#1B211C;}
+html[data-theme="dark"] .ziarah-intro{
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,0)),#1A201B;
+  border-color:#2D362F;}
+html[data-theme="dark"] .variant-card,
+html[data-theme="dark"] .ziarah-card,
+html[data-theme="dark"] .optional-link{background:#1A201B;border-color:#2D362F;}
+html[data-theme="dark"] .segmented{background:#1F2620;border-color:#2D362F;}
+html[data-theme="dark"] .segmented button{color:#A3AE9D;}
+html[data-theme="dark"] .segmented button.is-active{background:#26382C;color:#CFE0D2;}
+html[data-theme="dark"] .section-heading h2{color:#E6EFE1;}
+
+</style>
 </body>
 </html>
