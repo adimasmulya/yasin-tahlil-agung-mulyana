@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f7f3ea">
-  <meta name="description" content="Yasin, Tahlil, Doa Arwah, dan memorial untuk almarhum Agung Mulyana bin Mohammad Saleh Maskam.">
+  <meta name="description" content="Yasin, Tahlil, Doa Arwah, dan memorial untuk almarhum Agung Mulyana bin Mochammad Saleh Maskam.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <title>Yasin & Tahlil — Agung Mulyana</title>
   <style>
 :root {
@@ -140,8 +140,8 @@ html[data-theme="dark"] .primary-button { color: #132017; background: var(--acce
 .reading-meta .unit-title { color: var(--accent-strong); }
 .repeat-badge { flex: 0 0 auto; border-radius: 999px; background: color-mix(in srgb, var(--accent-soft) 78%, white 22%); color: var(--accent-strong); padding: 3px 9px; font-size: .68rem; }
 .arabic { direction: rtl; unicode-bidi: plaintext; text-align: right; font-family: var(--font-arabic); font-size: var(--arabic-size); line-height: 2.12; font-weight: 400; margin: 2px 0 16px; word-break: normal; overflow-wrap: anywhere; font-variant-ligatures: common-ligatures; }
-.transliteration { margin: 0 0 11px; color: var(--text); font-size: .96rem; line-height: 1.72; }
-.translation { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.72; }
+.transliteration { margin: 0 0 11px; color: var(--text); font-size: 1rem; line-height: 1.75; font-family: "Source Serif 4", Georgia, serif; font-style: italic; }
+.translation { margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.7; font-family: "Source Serif 4", Georgia, serif; }
 .footnote { margin: 12px 0 0; padding-top: 10px; border-top: 1px dashed var(--line); color: var(--muted); font-size: .78rem; }
 body.hide-latin .transliteration { display: none; }
 body.hide-translation .translation, body.hide-translation .footnote { display: none; }
@@ -163,7 +163,7 @@ body.hide-translation .translation, body.hide-translation .footnote { display: n
 .source-card a { font-size: .82rem; font-weight: 700; }
 .licence-note { color: var(--muted); font-size: .76rem; padding: 4px 3px; }
 
-.bottom-nav { position: fixed; z-index: 50; left: 50%; bottom: max(10px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(calc(100% - 22px), 520px); display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; padding: 5px; border: 1px solid var(--line); border-radius: 18px; background: color-mix(in srgb, var(--surface-solid) 90%, transparent); backdrop-filter: blur(20px); box-shadow: 0 12px 36px rgba(30,40,33,.12); }
+.bottom-nav { position: fixed; z-index: 50; left: 50%; bottom: max(10px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(calc(100% - 22px), 520px); display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 5px; border: 1px solid var(--line); border-radius: 18px; background: color-mix(in srgb, var(--surface-solid) 90%, transparent); backdrop-filter: blur(20px); box-shadow: 0 12px 36px rgba(30,40,33,.12); }
 .bottom-nav a { min-height: 42px; display: grid; place-items: center; border-radius: 13px; color: var(--muted); text-decoration: none; font-weight: 750; font-size: .70rem; }
 .bottom-nav a.is-active { background: var(--accent-soft); color: var(--accent-strong); }
 .noscript { padding: 18px; margin: 18px; background: #fff3cd; color: #443500; border-radius: 12px; }
@@ -352,6 +352,9 @@ body{background:var(--v5-ivory);}
 .reader-topbar,.controls{background:color-mix(in srgb,var(--v5-ivory) 91%,transparent);}
 .reading-card{background:#fffdf8;border-color:#e6dcc9;box-shadow:0 10px 26px rgba(47,55,46,.055);}
 .arabic{font-family:"Amiri Quran","Amiri","Noto Naskh Arabic",serif;line-height:2.12;}
+.section-note{font-family:"Source Serif 4",Georgia,serif;color:var(--muted);font-size:.95rem;line-height:1.7;margin:0 0 22px;padding-left:14px;border-left:2px solid var(--line);}
+.footnote{font-family:"Source Serif 4",Georgia,serif;color:var(--muted);font-size:.85rem;line-height:1.65;margin:10px 0 0;font-style:italic;}
+.weton{display:block;margin-top:5px;font-size:.82rem;letter-spacing:.04em;color:var(--accent);}
 
 /* In Memoriam editorial redesign */
 .memorial-section{padding-top:74px;padding-bottom:130px;}
@@ -365,8 +368,8 @@ body{background:var(--v5-ivory);}
 .obituary .obit-dates{font-family:Georgia,"Times New Roman",serif;color:#39423b;margin:8px 0 18px;}
 .obituary .career{max-width:610px;gap:3px;margin-bottom:10px;}
 .obituary .career p{font-family:Georgia,"Times New Roman",serif;font-size:.94rem;color:#313b33;}
-.obituary .career strong{font-size:.94rem;font-weight:500;}
-.obituary .career span{font-size:.82rem;color:#444c45;}
+.obituary .career strong{display:block;font-size:.97rem;font-weight:600;line-height:1.4;}
+.obituary .career span{display:block;font-size:.9rem;color:#5c6459;line-height:1.5;margin-top:3px;}.obituary .career span em{font-style:normal;white-space:nowrap;font-variant-numeric:tabular-nums;}
 .obituary .obit-rule{display:none;}
 .obituary .obit-copy{max-width:570px;margin:22px auto 18px;font-style:italic;font-size:.98rem;line-height:1.55;color:#454a45;}
 .family-cards{display:grid;gap:10px;margin:20px auto 24px;max-width:650px;text-align:left;}
@@ -497,9 +500,9 @@ body.memorial-active .controls {
     <div class="cover-inner">
       <button class="cover-menu-button" id="coverMenuButton" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
       <div class="cover-menu" id="coverMenu" aria-label="Menu cepat">
-        <a href="#yasin">Surat Yasin</a><a href="#tahlil">Tahlil</a><a href="#doa">Doa Arwah</a><a href="ziarah.html">Ziarah Kubur</a><a href="#in-memoriam">In Memoriam</a>
+        <a href="#tawassul">Hadiah Al-Fatihah</a><a href="#yasin">Surat Yasin</a><a href="#tahlil">Tahlil</a><a href="#doa">Doa Arwah</a><a href="ziarah.html">Ziarah Kubur</a><a href="#in-memoriam">In Memoriam</a>
       </div>
-      <div class="cover-reading-index">YASIN<br>TAHLIL<br>DOA<br>ZIARAH</div>
+      <div class="cover-reading-index">FATIHAH<br>YASIN<br>TAHLIL<br>DOA</div>
       <p class="eyebrow">Mengenang dan mendoakan</p>
       <p class="cover-subtitle">Almarhum</p>
       <div class="ornament-line">✧</div>
@@ -507,8 +510,8 @@ body.memorial-active .controls {
         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgMjQwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlBsYWNlaG9sZGVyIGZvdG8iPgogIDxyZWN0IHdpZHRoPSIyNDAiIGhlaWdodD0iMjQwIiByeD0iMTIwIiBmaWxsPSIjZTVlOGRmIi8+CiAgPGNpcmNsZSBjeD0iMTIwIiBjeT0iODgiIHI9IjQwIiBmaWxsPSIjYWFiNWFhIi8+CiAgPHBhdGggZD0iTTUwIDIwNWM5LTQzIDM1LTY2IDcwLTY2czYxIDIzIDcwIDY2IiBmaWxsPSIjYWFiNWFhIi8+CiAgPHRleHQgeD0iMTIwIiB5PSIyMjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjIyIiBmaWxsPSIjNWQ2YTYwIj5BTTwvdGV4dD4KPC9zdmc+Cg==" alt="" class="portrait">
       </div>
       <div class="event-pill" id="eventLabel">40 Hari</div>
-      <h1>Agung Mulyana<br><span>bin Mohammad Saleh Maskam</span></h1>
-      <p class="dates">7 Desember 1955 <span aria-hidden="true">—</span> 25 Agustus 2026</p>
+      <h1>Agung Mulyana<br><span>bin Mochammad Saleh Maskam</span></h1>
+      <p class="dates" id="coverDates" data-lahir="1955-12-07" data-wafat="2026-08-25">7 Desember 1955 <span aria-hidden="true">—</span> 25 Agustus 2026<span class="weton" id="coverWeton"></span></p>
       <div class="ornament-after-date"></div>
       <div class="cover-prayer">
         <p>Mohon berkenan menghadiahkan Al-Fatihah serta doa terbaik untuk almarhum. Semoga Allah SWT menerima amal ibadahnya, mengampuni segala khilafnya, melapangkan kuburnya, dan menempatkannya dalam rahmat-Nya.</p>
@@ -540,7 +543,11 @@ body.memorial-active .controls {
       <button type="button" class="control-toggle" id="wakeToggle" aria-pressed="false">Layar aktif</button>
     </div>
 
-    <section class="reader-section" id="yasin" data-section-name="Surat Yasin">
+    <section class="reader-section" id="tawassul">
+<h2 class="section-heading">Hadiah Al-Fatihah</h2>
+<div id="tawassulContent" class="reading-list"></div>
+</section>
+<section class="reader-section" id="yasin" data-section-name="Surat Yasin">
       <div class="section-heading">
         <p class="eyebrow">يس</p>
         <h2>Surat Yasin</h2>
@@ -653,7 +660,7 @@ body.memorial-active .controls {
 
       <div class="dedication-card">
         <span>Dikhususkan untuk</span>
-        <strong>Agung Mulyana bin Mohammad Saleh Maskam</strong>
+        <strong>Agung Mulyana bin Mochammad Saleh Maskam</strong>
       </div>
 
       <div id="tahlilContent" class="reading-list">
@@ -728,11 +735,11 @@ body.memorial-active .controls {
         <div class="obit-quote">“Sesungguhnya kami milik Allah dan kepada-Nyalah kami kembali.”<cite>QS. Al-Baqarah: 156</cite></div>
         <p class="obit-kicker">IN MEMORIAM</p>
         <div class="obit-ornament">✧</div>
-        <h2>Agung Mulyana<br><span style="font-size:.55em;font-weight:500">bin Mohammad Saleh Maskam</span></h2>
+        <h2>Agung Mulyana<br><span style="font-size:.55em;font-weight:500">bin Mochammad Saleh Maskam</span></h2>
         <p class="obit-dates">7 Desember 1955 — 25 Agustus 2026</p>
         <div class="career">
-          <p><strong>Direktur Jenderal Bina Administrasi Kewilayahan</strong><span>Kementerian Dalam Negeri Republik Indonesia (2014–2015)</span></p>
-          <p><strong>Penjabat Gubernur Provinsi Kepulauan Riau</strong><span>2015</span></p>
+          <p><strong>Direktur Jenderal Bina Administrasi Kewilayahan</strong><span>Kementerian Dalam Negeri Republik Indonesia <em>(2014–2015)</em></span></p>
+           <p><strong>Penjabat Gubernur Provinsi Kepulauan Riau</strong><span><em>(2015)</em></span></p>
         </div>
         <div class="obit-ornament">✧</div>
         <div class="obit-copy">
@@ -753,11 +760,10 @@ body.memorial-active .controls {
   </main>
 
   <nav class="bottom-nav" aria-label="Navigasi bacaan">
-    <a href="#yasin" data-target="yasin">Yasin</a>
-    <a href="#tahlil" data-target="tahlil">Tahlil</a>
-    <a href="#doa" data-target="doa">Doa</a>
-    <a href="ziarah.html">Ziarah</a>
-    <a href="#in-memoriam" data-target="in-memoriam">Memorial</a>
+    <a href="#tawassul" data-target="tawassul">Fatihah</a>
+     <a href="#yasin" data-target="yasin">Yasin</a>
+     <a href="#tahlil" data-target="tahlil">Tahlil</a>
+     <a href="#doa" data-target="doa">Doa</a>
   </nav>
 
   <noscript>
@@ -1401,12 +1407,13 @@ window.TAHLIL_DATA = {
       "arabic": "ثُمَّ إِلَى جَمِيْعِ أهْلِ الْقُبُوْرِ مِمَّنْ ذُكِرَتْ أَسْمَاؤُهُ فِيْ هٰذِهِ الرِّسَالَةِ حَضْرَةِ رُوْحِ … وَحَضْرَةِ رُوْحِ … وَحَضْرَةِ رُوْحِ … رَحِمَهُمُ اللهُ وَغَفَرَهُمْ، الْفَاتِحَةُ",
       "transliteration": "Tsumma ilâ jamî‘i ahlil-qubûri mimman dzukirot asmâ’uhu fi hâdzihir risâlati, ḫadlrati rûhi…, wa ḫadlrati rûhi…, wa ḫadlrati rûhi…, roḫimahumullâhu wa ghafarahum, al-fâtiḫah",
       "translation": "Kemudian kepada semua ahli kubur, yang namanya disebutkan dalam risalah ini. Kepada…, dan kepada…, dan kepada…. Semoga Allah merahmati dan mengampuni mereka. Bacaan Al-Fatihah ini kami tujukan kepada Allah dan pahalanya untuk mereka semua. Al-Fatihah.",
-      "source": "Quran NU Online"
+      "source": "Quran NU Online",
+      "footnote": "Bagian ini disebutkan khusus untuk almarhum malam ini."
     },
     {
       "id": "nu-4",
       "title": "Surat Al-Ikhlas",
-      "arabic": "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ قُلْ هُوَ اللّٰهُ اَحَدٌۚ، اَللّٰهُ الصَّمَدُۚ، لَمْ يَلِدْ وَلَمْ يُوْلَدْۙ، وَلَمْ يَكُنْ لَّهٗ كُفُوًا اَحَـــــدٌ ×٣",
+      "arabic": "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ قُلْ هُوَ اللّٰهُ اَحَدٌۚ، اَللّٰهُ الصَّمَدُۚ، لَمْ يَلِدْ وَلَمْ يُوْلَدْۙ، وَلَمْ يَكُنْ لَّهٗ كُفُوًا اَحَـــــدٌ",
       "transliteration": "Bismillâhir-raḫmânir-raḫîm(i), Qul huwallâhu aḫad, Allâhush-shamad, lam yalid wa lam yûlad, wa lam yakul lahû kufuwan aḫad 3x",
       "translation": "Dengan menyebut nama Allah yang maha pengasih lagi maha penyayang. Katakanlah (Muhammad), “Dialah Allah, Yang Maha Esa. Allah tempat meminta segala sesuatu. (Allah) tidak beranak dan tidak pula diperanakkan. Dan tidak ada sesuatu yang setara dengan Dia.” (3 kali).",
       "repeat": 3,
@@ -1471,10 +1478,10 @@ window.TAHLIL_DATA = {
     {
       "id": "nu-12",
       "title": "Al-Baqarah 163",
-      "arabic": "وَإِلٰهُكُمْ إِلٰهٌ وَّاحِدٌ لَا إِلٰهَ إِلَّا هُوَ الرَّحْمٰنُ الرَّحِيمُ",
-      "transliteration": "Wa ilâhukum ilâhuw wâḫidul lâ ilâha illa Huwar-raḫmânur-raḫîm.",
-      "translation": "Artinya, “Dan Tuhan kalian adalah Tuhan yang maha esa. Tiada tuhan yang layak disembah kecuali Dia yang maha pengasih lagi maha penyayang.”",
-      "source": "Quran NU Online"
+      "arabic": "وَاِلٰهُكُمْ اِلٰهٌ وَّاحِدٌۚ لَآاِلٰهَ اِلَّا هُوَ الرَّحْمٰنُ الرَّحِيْمُ ࣖ",
+      "transliteration": "Wa ilāhukum ilāhuw wāḥid(un), lā ilāha illā huwar-raḥmānur-raḥīm(u).",
+      "translation": "Tuhan kamu adalah Tuhan Yang Maha Esa. Tidak ada tuhan selain Dia Yang Maha Pengasih lagi Maha Penyayang.",
+      "source": "Qur’an Kemenag (quran.kemenag.go.id)"
     },
     {
       "id": "nu-13",
@@ -1526,7 +1533,8 @@ window.TAHLIL_DATA = {
       "transliteration": "La ilâha illâllâh 100x",
       "translation": "Tiada tuhan selain Allah (100 kali).",
       "repeat": 100,
-      "source": "Quran NU Online"
+      "source": "Quran NU Online",
+      "footnote": "NU Online mencantumkan 100 kali. Sebagian majelis membaca 33 atau 160 kali. Ikuti imam."
     },
     {
       "id": "nu-31",
@@ -1577,10 +1585,11 @@ window.TAHLIL_DATA = {
     {
       "id": "nu-15",
       "title": "Al-Baqarah 284–286",
-      "arabic": "لِلّٰهِ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِۗ وَاِنْ تُبْدُوْا مَا فِيْٓ اَنْفُسِكُمْ اَوْ تُخْفُوْهُ يُحَاسِبْكُمْ بِهِ اللّٰهُۗ فَيَغْفِرُ لِمَنْ يَّشَاۤءُ وَيُعَذِّبُ مَنْ يَّشَاۤءُۗ وَاللّٰهُ عَلٰى كُلِّ شَيْءٍ قَدِيْرٌ، اٰمَنَ الرَّسُوْلُ بِمَآ اُنْزِلَ اِلَيْهِ مِنْ رَّبِّهٖ وَالْمُؤْمِنُوْنَۗ كُلٌّ اٰمَنَ بِاللّٰهِ وَمَلٰۤىِٕكَتِهٖ وَكُتُبِهٖ وَرُسُلِهٖۗ لَا نُفَرِّقُ بَيْنَ اَحَدٍ مِّنْ رُّسُلِهٖۗ وَقَالُوْا سَمِعْنَا وَاَطَعْنَا غُفْرَانَكَ رَبَّنَا وَاِلَيْكَ الْمَصِيْرُ، لَا يُكَلِّفُ اللّٰهُ نَفْسًا اِلَّا وُسْعَهَاۗ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْۗ رَبَّنَا لَا تُؤَاخِذْنَآ اِنْ نَّسِيْنَآ اَوْ اَخْطَأْنَاۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ اِصْرًا كَمَا حَمَلْتَهٗ عَلَى الَّذِيْنَ مِنْ قَبْلِنَاۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهٖۚ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا ×٧ أَنْتَ مَوْلَانَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
-      "transliteration": "Lillâhi mâ fis-samawâti wa mâ fil-ardli, wa in tubdû mâ fî anfusikum au tukhfûhu yuḫâsibkum bihillah. Fayaghfiru limay yasyâ’u wa yu‘adzdzibu may yasyâ’u. Wallahu ‘alâ kulli syai’in qadîr. Âmanar-rasûlu bimâ unzila ilaihi mir rabbihi wal-mu’minûn(a), kullun âmana billâhi wa malâ’ikatihi wa kutubihi wa rusulih(i). Lâ nufarriqu baina aḫadim mir-rusulihi wa qâlû sami‘nâ wa atha‘nâ gufrânaka rabbanâ wa ilaikal-mashîr. La yukallifullâhu nafsan illâ wus‘ahâ lahâ mâ kasabat wa ‘alaihâ mâk tasabat. Rabbanâ la tu’akhidhnâ in nasînâ au akhtha’na rabbanâ walâ taḫmil alainâ ishran kamâ ḫamaltahu ‘alal-ladzinâ min qablinâ rabbanâ wa lâ tuḫammilnâ mâ lâ thâqata lanâ bihi wa‘fu ‘annâ waghfir lanâ warḫamnâ 7x Anta maulânâ fanshurnâ ‘alal qaumil kâfirîn.",
-      "translation": "Hanya milik Allah segala yang ada di langit dan yang ada di bumi. Jika kamu menyatakan atau merahasiakan apa saja yang di hatimu, maka kamu dengan itu semua tetap akan diperhitungkan oleh Allah. Dia akan mengampuni dan menyiksa orang yang dikehendaki. Allah maha kuasa atas segala sesuatu. Rasulullah dan orang-orang yang beriman mempercayai apa saja yang diturunkan kepadanya dari Tuhannya. Semuanya beriman kepada Allah, para malaikat-Nya, kitab-kitab-Nya, dan kepada para utusan-Nya. ‘Kami tidak membeda-bedakan seorang rasul dari lainnya.’ Mereka berkata, ‘Kami mendengar dan kami menaati. Ampunan-Mu, wahai Tuhan kami, yang kami harapkan. Hanya kepada-Mu tempat kembali.’ Allah tidak membebani seseorang kecuali dengan kemampuannya. Ia mendapat balasan atas apa yang dia perbuat dan siksaan dari apa yang dia lakukan. ‘Tuhan kami, janganlah Kau siksa kami jika kami terlupa atau salah. Tuhan kami, jangan Kau tanggungkan pada kami dengan beban berat sebagaimana Kaubebankan kaum sebelum kami. Jangan pula Kaubebankan pada kami sesuatu yang kami tidak mampu. Ampunilah kami. Kasihanilah kami. Kau pemimpin kami. Tolonglah kami menghadapi golongan kafir.",
-      "source": "Quran NU Online"
+      "arabic": "لِلّٰهِ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِ ۗ وَاِنْ تُبْدُوْا مَا فِيْٓ اَنْفُسِكُمْ اَوْ تُخْفُوْهُ يُحَاسِبْكُمْ بِهِ اللّٰهُ ۗ فَيَغْفِرُ لِمَنْ يَّشَاۤءُ وَيُعَذِّبُ مَنْ يَّشَاۤءُ ۗ وَاللّٰهُ عَلٰى كُلِّ شَيْءٍ قَدِيْرٌ اٰمَنَ الرَّسُوْلُ بِمَآ اُنْزِلَ اِلَيْهِ مِنْ رَّبِّهٖ وَالْمُؤْمِنُوْنَۗ كُلٌّ اٰمَنَ بِاللّٰهِ وَمَلٰۤىِٕكَتِهٖ وَكُتُبِهٖ وَرُسُلِهٖۗ لَا نُفَرِّقُ بَيْنَ اَحَدٍ مِّنْ رُّسُلِهٖ ۗ وَقَالُوْا سَمِعْنَا وَاَطَعْنَا غُفْرَانَكَ رَبَّنَا وَاِلَيْكَ الْمَصِيْرُ لَا يُكَلِّفُ اللّٰهُ نَفْسًا اِلَّا وُسْعَهَا ۗ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ ۗ رَبَّنَا لَا تُؤَاخِذْنَآ اِنْ نَّسِيْنَآ اَوْ اَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ اِصْرًا كَمَا حَمَلْتَهٗ عَلَى الَّذِيْنَ مِنْ قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهٖۚ وَاعْفُ عَنَّاۗ وَاغْفِرْ لَنَاۗ وَارْحَمْنَا ۗ اَنْتَ مَوْلٰىنَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكٰفِرِيْنَ ࣖ",
+      "transliteration": "Lillāhi mā fis-samāwāti wa mā fil-arḍ(i), wa in tubdū mā fī anfusikum au tukhfūhu yuḥāsibkum bihillāh(u), fayagfiru limay yasyā'u wa yu‘ażżibu may yasyā'(u), wallāhu ‘alā kulli syai'in qadīr(un). Āmanar-rasūlu bimā unzila ilaihi mir rabbihī wal-mu'minūn(a), kullun āmana billāhi wa malā'ikatihī wa kutubihī wa rusulih(ī), lā nufarriqu baina aḥadim mir rusulih(ī), wa qālū sami‘nā wa aṭa‘nā, gufrānaka rabbanā wa ilaikal-maṣīr(u). Lā yukallifullāhu nafsan illā wus‘ahā, lahā mā kasabat wa ‘alaihā maktasabat, rabbanā lā tu'ākhiżnā in nasīnā au akhṭa'nā, rabbanā wa lā taḥmil ‘alainā iṣran kamā ḥamaltahū ‘alal-lażīna min qablinā, rabbanā wa lā tuḥammilnā mā lā ṭāqata lanā bih(ī), wa‘fu ‘annā, wagfir lanā, warḥamnā, anta maulānā fanṣurnā ‘alal qaumil-kāfirīn(a).",
+      "translation": "Milik Allahlah apa yang ada di langit dan apa yang ada di bumi. Jika kamu menyatakan apa yang ada di dalam hatimu atau kamu menyembunyikannya, niscaya Allah memperhitungkannya bagimu. Dia mengampuni siapa saja yang Dia kehendaki dan mengazab siapa pun yang Dia kehendaki. Allah Maha Kuasa atas segala sesuatu. Rasul (Muhammad) beriman pada apa (Al-Qur’an) yang diturunkan kepadanya dari Tuhannya, demikian pula orang-orang mukmin. Masing-masing beriman kepada Allah, malaikat-malaikat-Nya, kitab kitab-Nya, dan rasul-rasul-Nya. (Mereka berkata,) “Kami tidak membeda-bedakan seorang pun dari rasul-rasul-Nya.” Mereka juga berkata, “Kami dengar dan kami taat. Ampunilah kami, wahai Tuhan kami. Hanya kepada-Mu tempat (kami) kembali.” Allah tidak membebani seseorang, kecuali menurut kesanggupannya. Baginya ada sesuatu (pahala) dari (kebajikan) yang diusahakannya dan terhadapnya ada (pula) sesuatu (siksa) atas (kejahatan) yang diperbuatnya. (Mereka berdoa,) “Wahai Tuhan kami, janganlah Engkau hukum kami jika kami lupa atau kami salah. Wahai Tuhan kami, janganlah Engkau bebani kami dengan beban yang berat sebagaimana Engkau bebankan kepada orang-orang sebelum kami. Wahai Tuhan kami, janganlah Engkau pikulkan kepada kami apa yang tidak sanggup kami memikulnya. Maafkanlah kami, ampunilah kami, dan rahmatilah kami. Engkaulah pelindung kami. Maka, tolonglah kami dalam menghadapi kaum kafir.”",
+      "source": "Qur’an Kemenag (quran.kemenag.go.id)",
+      "footnote": "Pada bagian “wa‘fu ‘annâ waghfir lanâ warhamnâ” dibaca 7 kali."
     },
     {
       "id": "nu-16",
@@ -1597,7 +1606,8 @@ window.TAHLIL_DATA = {
       "arabic": "رَحْمَةُ اللهِ وَبَرَكَاتُهُ عَلَيْكُمْ أَهْلَ الْبَيْتِ إِنَّهُ حَمِيْدٌ مَّجِيْدٌ",
       "transliteration": "Raḫmatul-lâhi wa barakâtuhu ‘alaikum ahlal-baiti innahu ḫamîdun majîd",
       "translation": "Dan rahmat Allah serta berkah-Nya (kami harapkan) melimpah di atas kamu sekalian wahai ahlul bait. Sungguh Dia maha terpuji lagi maha pemurah.",
-      "source": "Quran NU Online"
+      "source": "Quran NU Online",
+      "footnote": "Dibaca sebagian, mulai dari “rahmatullâhi”."
     },
     {
       "id": "nu-18",
@@ -1605,7 +1615,8 @@ window.TAHLIL_DATA = {
       "arabic": "إِنَّمَا يُريِدُ اللهُ لِيُذْهِبَ عَنْكُمُ الرِّجْسَ أَهْلَ الْبَيْتِ وَيُطَهِّرَكُمْ تَطْهِيْرًا",
       "transliteration": "Innamâ yurîdullâhu liyudzhiba ‘ankumur-rijsa ahlal-baiti wa yuthahhira kum tathhîra",
       "translation": "Sungguh Allah berkehendak menghilangkan segala kotoran padamu, wahai ahlul bait, dan menyucikanmu sebersih-bersihnya.",
-      "source": "Quran NU Online"
+      "source": "Quran NU Online",
+      "footnote": "Dibaca sebagian, mulai dari “innamâ yurîdullâhu”."
     },
     {
       "id": "nu-19",
@@ -1706,7 +1717,7 @@ window.TAHLIL_DATA = {
   'use strict';
 
   const memorial = {
-    name: 'Agung Mulyana bin Mohammad Saleh Maskam',
+    name: 'Agung Mulyana bin Mochammad Saleh Maskam',
     birthDate: '1955-12-07',
     deathDate: '2026-08-25'
   };
@@ -1857,16 +1868,61 @@ window.TAHLIL_DATA = {
     root.replaceChildren(fragment);
   }
 
+  function renderTawassul() {
+    const root = qs('#tawassulContent');
+    if (!root) return;
+    const fragment = document.createDocumentFragment();
+    window.TAHLIL_DATA.prefix.slice(0, 4).forEach((unit) =>
+      fragment.append(createCard(unit, unit.title)));
+    root.replaceChildren(fragment);
+  }
+
   function renderTahlil() {
     const root = qs('#tahlilContent');
     const units = [
-      ...window.TAHLIL_DATA.prefix,
+      ...window.TAHLIL_DATA.prefix.slice(4),
       ...(state.tahlilVariant === 'full' ? window.TAHLIL_DATA.fullExtra : []),
       ...window.TAHLIL_DATA.short
     ];
     const fragment = document.createDocumentFragment();
     units.forEach((unit, index) => fragment.append(createCard(unit, unit.title || `Tahlil · ${index + 1}`)));
     root.replaceChildren(fragment);
+  }
+
+  function renderNotes() {
+    const NOTES = {"tawassulContent": "Majelis dibuka dengan menghadiahkan Al-Fatihah. Pemimpin membaca pengantarnya, hadirin membaca Al-Fatihah setiap kali disebut “al-Fâtihah”.", "yasinContent": "Dibaca lengkap, 83 ayat. Biasanya dipimpin oleh satu orang dan diikuti bersama-sama. Gunakan daftar ayat di bawah untuk mengejar bila tertinggal.", "tahlilContent": "Bagian inti majelis, dipimpin oleh imam. Kalimat yang berulang ditandai dengan jumlah bacaannya; gunakan penghitung di layar bila membantu. Ikuti tempo imam, bukan layar.", "doaContent": "Doa dipimpin oleh imam, hadirin mengucapkan “âmîn”. Susunan doa berbeda-beda antar majelis, jadi ikuti bacaan imam. Bagian di bawah ini adalah susunan yang lazim."};
+    Object.entries(NOTES).forEach(([id, text]) => {
+      const host = document.getElementById(id);
+      if (!host || !host.parentNode) return;
+      let note = host.parentNode.querySelector('.section-note');
+      if (!note) {
+        note = document.createElement('p');
+        note.className = 'section-note';
+        host.parentNode.insertBefore(note, host);
+      }
+      note.textContent = text;
+    });
+  }
+
+  function renderWeton() {
+    const el = document.getElementById('coverWeton');
+    const box = document.getElementById('coverDates');
+    if (!el || !box) return;
+    const HARI = ['Senin','Selasa','Rabu','Kamis','Jumat','Sabtu','Minggu'];
+    const PASARAN = ['Legi','Pahing','Pon','Wage','Kliwon'];
+    const jdn = (d) => {
+      const y = d.getFullYear(), m = d.getMonth() + 1, day = d.getDate();
+      const a = Math.floor((14 - m) / 12), yy = y + 4800 - a, mm = m + 12 * a - 3;
+      return day + Math.floor((153 * mm + 2) / 5) + 365 * yy + Math.floor(yy / 4)
+           - Math.floor(yy / 100) + Math.floor(yy / 400) - 32045;
+    };
+    const weton = (s) => {
+      const [Y, M, D] = s.split('-').map(Number);
+      const j = jdn(new Date(Y, M - 1, D));
+      return HARI[j % 7] + ' ' + PASARAN[j % 5];
+    };
+    const lahir = box.dataset.lahir, wafat = box.dataset.wafat;
+    el.textContent = (lahir ? weton(lahir) + '  \u00b7  ' : '') + weton(wafat);
   }
 
   function renderDoa() {
@@ -1989,9 +2045,12 @@ window.TAHLIL_DATA = {
   function init() {
     qs('#eventLabel').textContent = currentEventLabel();
     setTheme(state.theme);
+    renderTawassul();
     renderYasin();
     renderTahlil();
     renderDoa();
+    renderNotes();
+    renderWeton();
     applyReaderState();
     bindEvents();
     setupSectionObserver();
